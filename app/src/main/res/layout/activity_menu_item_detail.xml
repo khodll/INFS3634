@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuItemDetailActivity">
+
+    <ImageView
+        android:id="@+id/itemPic"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cheeseburger" />
+
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/itemPic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemPic"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/addToOrder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="onAddToOrder"
+        android:text="Add to Order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/qtyOrdered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="2"
+        android:inputType="textPersonName"
+        android:text="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemPic"
+        app:layout_constraintTop_toTopOf="@+id/itemCost" />
+
+    <TextView
+        android:id="@+id/itemCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="$5.80"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@id/itemPic"
+        app:layout_constraintStart_toStartOf="@id/itemPic"
+        app:layout_constraintTop_toBottomOf="@id/itemPic" />
+
+    <Button
+        android:id="@+id/increaseQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickPlus"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@+id/qtyOrdered"
+        app:layout_constraintTop_toTopOf="@+id/itemCost" />
+
+    <Button
+        android:id="@+id/decreaseQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:onClick="onClickMinus"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/qtyOrdered"
+        app:layout_constraintTop_toTopOf="@+id/itemCost" />
+
+    <TextView
+        android:id="@+id/itemDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Our thick cut chips are deliciously seasoned, delivering a crispier crunch on the outside, fluffy and hot on the inside. The chips are better at Hungry Jack's. Available in Small, Medium or Large."
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemCost" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
